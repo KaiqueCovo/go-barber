@@ -1,5 +1,7 @@
 import React from 'react'
 
+import AuthContext from './context/AuthContext'
+
 import GlobalStyle from './styles/global'
 
 import SignIn from './pages/SignIn'
@@ -8,7 +10,9 @@ import SignIn from './pages/SignIn'
 function App() {
   return (
     <>
-      <SignIn />
+      <AuthContext.Provider value={{ name: 'Diego' }}>
+        <SignIn />
+      </AuthContext.Provider>
       <GlobalStyle />
     </>
   )
