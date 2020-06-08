@@ -1,20 +1,20 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
 import GlobalStyle from './styles/global'
 import GlobalProvider from './hooks'
 
-import SignIn from './pages/SignIn'
-// import SignUp from './pages/SignUp'
+import Routes from './routes'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalProvider>
-        <SignIn />
+        <Routes />
       </GlobalProvider>
 
       <GlobalStyle />
-    </>
+    </BrowserRouter>
   )
 }
 
